@@ -31,7 +31,7 @@ app.use("/api", notificationRoutes);
 
 
 // database
-mongoose.connect("mongodb://127.0.0.1:27017/uniresource")
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected"))
     .catch((err) => console.log("MongoDB ERROR:", err));
 
